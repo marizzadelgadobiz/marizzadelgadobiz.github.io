@@ -290,17 +290,26 @@ button[type="submit"]:hover {
     width: 110px;
     height: 110px;
   }
+  /* Content Creator Portfolio stays horizontal and scrollable */
   .portfolio-gallery {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    flex-wrap: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: var(--sage-300) var(--sage-100);
   }
   .portfolio-gallery img,
   .portfolio-gallery img.landscape-img {
-    width: 100vw;
-    max-width: 420px;
+    width: 75vw;
+    max-width: 320px;
+    min-width: 180px;
     height: auto;
     border-radius: 16px;
+    flex-shrink: 0;
   }
   .appearance-photos {
     gap: 10px;
