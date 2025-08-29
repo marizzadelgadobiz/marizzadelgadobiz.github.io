@@ -40,7 +40,9 @@ body {
 .left-pane {
   background: var(--sage-200);
   padding: 40px 24px;
-  min-width: 320px;
+  min-width: 240px;
+  max-width: 320px;
+  flex: 0 0 260px; /* fixed narrow width */
   box-sizing: border-box;
   display: flex;
   align-items: flex-start;
@@ -50,7 +52,7 @@ body {
 .right-pane {
   background: var(--bg-main);
   padding: 40px 36px;
-  flex: 1;
+  flex: 2 1 0; /* right pane is much larger */
   box-sizing: border-box;
 }
 
@@ -130,7 +132,7 @@ section {
 
 .portfolio-gallery img,
 .portfolio-gallery img.landscape-img {
-  width: 200px;
+  width: 220px;
   max-width: 100%;
   height: auto;
   object-fit: cover;
@@ -153,7 +155,7 @@ section {
 
 .appearance-photos img,
 .appearance-photos img.landscape-logo {
-  width: 100px;
+  width: 120px;
   max-width: 100%;
   height: auto;
   object-fit: contain;
